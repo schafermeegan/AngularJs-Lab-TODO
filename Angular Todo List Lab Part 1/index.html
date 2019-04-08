@@ -20,10 +20,10 @@
             <ol>
               <li ng-repeat="todo in todos | filter:test">
 
-                <label 
-
-                <label ng-click="task.newtodo = !task.newtodo">
-                    <span ng-class="{ completed: task.newtodo }"><a class="completeButton" ng-if="!task.newtodo" ng-model="todo.done" href="#" >Complete</a><span class="done-{{todo.done}}">
+                <label ng-click="task.completed = !task.completed">
+                    <span ng-class="{ completed: task.completed }">
+                      <a class="completeButton" ng-if="!task.completed" ng-model="todo.done" href="#" >Complete</a><span ng-class="
+                      {'done-true': task.completed}">
                       {{ todo.title }} </span></span>
                       
                       <!-- <button class="completeButton" ng-click="completedTask()">Complete</button>
