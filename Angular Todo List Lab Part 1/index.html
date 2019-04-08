@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> My AngularJS App </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="TodoController">
+
+  <div class="container">
+      <div class="inside">
+        <h1>TODO List</h1>
+        <h4>A place to store things that you have to do!</h4>
+          <input class="filterToDo" type="text" placeholder="Filter your to dos" ng-model="test" />
+
+          <div class="lists" ng-class="myClass">    
+            <ol>
+              <li ng-repeat="todo in todos | filter:test">
+              <button class="completeButton" ng-click="completedTask()">Complete</button>
+              <span>{{todo.title}}</span>
+              <button class="delete" ng-click="removeTask($index)">X</button>
+              </li>
+            </ol>
+          </div>
+
+          <form name="todosFrm" ng-submit="addtask()">
+            <input class="bottomInput" type="text" name="newtodo" placeholder="Add your to do" ng-model="newtodo" required />
+            <button class="addButton" ng-disabled="todosFrm.$invalid" ng-click="addtask()">Add</button>
+          </form>
+
+        </div>
+    </div>
+   
+
+  <script src="https://code.angularjs.org/1.7.8/angular.js"></script>
+  <script src="app.module.js"></script>
+  <script src="app.controller.js"></script>
+</body>
+</html>
+
+

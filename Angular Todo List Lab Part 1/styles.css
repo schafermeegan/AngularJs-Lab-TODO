@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    background: linear-gradient(45deg, #e83159, #e92a60, #eb2367, #eb1b6e, #eb1276);
+    padding-top: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    background-color: white;
+    width: 30vw;
+    height: 72vh;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+.inside {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+.bottomInput {
+    margin-bottom: 10px;
+}
+.addButton {
+    background-color: #E43485;
+    color: white;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.filterToDo {
+    width: 96%;
+}
+input[type=text] {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding-left: 10px;
+}
+.completeButton {
+    background-color: white;
+    color: #E43485;
+    border: 1px solid #E43485;
+    border-radius: 5px;
+    outline: none;
+}
+li, .completeButton {
+    font-size: medium;
+}
+
+.lists {
+    display: flex;
+    
+    width: 100%;
+}
+li {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+h1 {
+    margin-bottom: 5px;
+}
+h4 {
+    margin-top: 5px;
+    font-weight: 100;
+}
+
+.delete {
+    background-color: white;
+    outline: none;
+    font-weight: 600;
+    border: none;
+    float: right;
+}
+
+ol {
+    width: 100%;
+}
+
