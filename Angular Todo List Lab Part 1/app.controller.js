@@ -17,11 +17,13 @@ function TodoController($scope) {
       completed: false
     }];
 
+
+//cannot get the strike through with the class .done to work.  
 		$scope.addtask = function() {
 			$scope.todos.push({'title': $scope.newtodo, 'done':false})
 			$scope.newtodo = ''
-		}
-
+    }
+    
 		$scope.removeTask = function(index) {	
 			$scope.todos.splice(index, 1);
     }

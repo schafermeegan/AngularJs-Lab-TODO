@@ -56,20 +56,20 @@ input[type=text] {
     border: 1px solid #E43485;
     border-radius: 5px;
     outline: none;
-}
-li, .completeButton {
-    font-size: medium;
+    text-decoration: none;
+    font-size: small;
+    padding: 3px;
 }
 
 .lists {
     display: flex;
-    
     width: 100%;
 }
 li {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: medium;
 }
 
 
@@ -92,4 +92,9 @@ h4 {
 ol {
     width: 100%;
 }
+
+.done-true {
+    text-decoration: line-through;
+    color: black;
+  }
 

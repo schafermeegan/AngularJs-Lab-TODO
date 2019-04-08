@@ -19,12 +19,26 @@
           <div class="lists" ng-class="myClass">    
             <ol>
               <li ng-repeat="todo in todos | filter:test">
-              <button class="completeButton" ng-click="completedTask()">Complete</button>
-              <span>{{todo.title}}</span>
-              <button class="delete" ng-click="removeTask($index)">X</button>
+
+                <label 
+
+                <label ng-click="task.newtodo = !task.newtodo">
+                    <span ng-class="{ completed: task.newtodo }"><a class="completeButton" ng-if="!task.newtodo" ng-model="todo.done" href="#" >Complete</a><span class="done-{{todo.done}}">
+                      {{ todo.title }} </span></span>
+                      
+                      <!-- <button class="completeButton" ng-click="completedTask()">Complete</button>
+          <span>{{todo.title}}</span> -->
+          
+                      <button class="delete" ng-click="removeTask($index)">X</button>
+            </label>
               </li>
             </ol>
           </div>
+
+          
+
+
+
 
           <form name="todosFrm" ng-submit="addtask()">
             <input class="bottomInput" type="text" name="newtodo" placeholder="Add your to do" ng-model="newtodo" required />
